@@ -24,7 +24,11 @@ google_token = get_oauth_token(
 )
 ```
 
-By default the function will require private key and certificate pair to be provided. These take a form of a file in the filesystem and are used to facilitate TLS for the web-server which gets created to consume the OAuth redirect. Default expected names of these files are `key.pem` and `cert.pem` respectively. You can configure this as follows:
+By default the function will require private key and certificate pair to be provided. These take a form of a file in the filesystem and are used to facilitate TLS for the web-server which gets created to consume the OAuth redirect. 
+
+> 📝 SUSE provides a nice tutorial: https://www.suse.com/support/kb/doc/?id=000018152
+
+Default expected names of these files are `key.pem` and `cert.pem` respectively. You can configure this as follows:
 
 ```python
 from yoauth import get_oauth_token, SSLCerts
@@ -42,7 +46,7 @@ google_token = get_oauth_token(
 )
 ```
 
-:warning: If you really REALLY trust your network you can disable this by setting `require_tls=False`, but be aware that **tokens** that provide access to your potentially expensive cloud resources or sensitive data **will be sent around in plain-text**. This software is distributed under MIT license. I will not be held responsible for any damages caused by your negligence.
+> :warning: If you really REALLY trust your network you can disable this by setting `require_tls=False`, but be aware that **tokens** that provide access to your potentially expensive cloud resources or sensitive data **will be sent around in plain-text**. This software is distributed under MIT license. I will not be held responsible for any damages caused by your negligence.
 
 
 ### How it works
