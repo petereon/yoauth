@@ -50,6 +50,6 @@ google_token = get_oauth_token(
 The function `get_oauth_token` does a few things:
 
 1. Opens a system default web browser with the `authorization_url`, this will generally be a login page.
-2. Creates a short-lived `localhost` web-server on a free system provided port and waits for authorization request redirect. The browser will execute automatically be redirected after successful login.
+2. Creates a short-lived `localhost` web-server on a free system-provided port and waits for authorization request redirect. The browser will automatically be redirected after a successful login.
 3. Server receives the authorization code from the redirect and stops serving.
 4. Request is sent to `token_url` utilizing the authorization_code and token is recieved in response.
